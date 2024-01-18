@@ -2125,10 +2125,16 @@ public class Chips extends javax.swing.JFrame {
             // If the payment amount is not empty, calculate the change
             int total = Integer.parseInt(lbTotal.getText());
             int amount = Integer.parseInt(txAmount.getText());
-            int change = total - amount;
             
-            // Set the change value in the change label
-            lbChange.setText(Integer.toString(change));
+            // Check if the amount is less than total
+            if (amount < total) {
+                JOptionPane.showMessageDialog(this, "Payment is insufficient","   Error", JOptionPane.ERROR_MESSAGE);  
+            } else {
+                // Calculate change if amount is sufficient
+                int change = total - amount;
+                // Set the change value in the change label
+                lbChange.setText(Integer.toString(change));
+            }
         } else {
             // If the payment amount is empty, show an error message
             JOptionPane.showMessageDialog(this, "Enter amount.", "   Error", JOptionPane.ERROR_MESSAGE); 
