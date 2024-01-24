@@ -20,7 +20,7 @@ public class Chips extends javax.swing.JFrame {
      */
     public Chips() {
         initComponents();
-        txAmount.setBackground(new java.awt.Color(0,0,0,1)); // Set Amount text field transparent
+        txAmount.setBackground(new java.awt.Color(0,0,0,1)); // Set the Cash Amount text field transparent
         tpChips = tpChipsReceipt;
     }
     
